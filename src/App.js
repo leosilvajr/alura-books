@@ -2,26 +2,19 @@ import Header from "./components/header";
 import styled from "styled-components";
 
 const AppContainer = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(to right top, 
-      #d16ba5, 
-      #c777b9, 
-      #ba83ca,
-      #aa8fd8, 
-      #9a9ae1, 
-      #8aa7ec, 
-      #79b3f4, 
-      #69bff8,
-      #52cffe, 
-      #41dfff, 
-      #46eefa, 
-      #5ffbf1);
-  
-  li{
-    list-style: none;
-  }
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right top,
+    #0a2f75,  /* azul profundo */
+    #164e9c,  /* azul médio */
+    #1e6fd1,  /* azul forte */
+    #2894f7,  /* azul claro vibrante */
+    #4cc9f0,  /* azul celeste */
+    #72e5f9   /* azul turquesa suave */
+  );
 `;
+
 
 function App() {
   return (
