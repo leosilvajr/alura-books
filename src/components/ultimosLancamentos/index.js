@@ -1,6 +1,8 @@
 import { livros } from "../ultimosLancamentos/dadosUltimosLancamentos";
-import styled from "styled-components";
 import { Titulo } from "../titulo";
+import CardRecomenda from "../cardRecomenda";
+import styled from "styled-components";
+import imagemLivro from "../../imagens/livro2.png";
 
 const UltimosLancamentosContainer = styled.section`
   background-color: #ebecee;
@@ -14,16 +16,16 @@ const NovosLivrosContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  flex-wrap: wrap;   /* quebra linha quando necessário */
-  gap: 16px;         /* espaço entre as capas */
+  flex-wrap: wrap;
+  gap: 20px;
   cursor: pointer;
 `;
 
 const LivroImagem = styled.img`
-  width: 110px;      /* tamanho menor */
-  height: auto;      /* mantém proporção */
+  width: 110px; /* tamanho menor */
+  height: auto; /* mantém proporção */
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   transition: transform 0.15s ease;
   object-fit: cover;
 
@@ -54,6 +56,12 @@ function UltimosLancamentos() {
           />
         ))}
       </NovosLivrosContainer>
+      <CardRecomenda
+        titulo="Talvez você se interesse por"
+        subtitulo="Angular 11"
+        descricao="Construindo uma aplicação com o Angular"
+        img={imagemLivro}
+      />
     </UltimosLancamentosContainer>
   );
 }
